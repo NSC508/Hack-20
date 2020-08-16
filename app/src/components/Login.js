@@ -34,6 +34,7 @@ class Login extends React.Component {
     return (
       <div style={{ textAlign: "center", marginTop: "100px" }}>
         <div>
+          <h3>Log in or sign up to access messaging!</h3>
           <div>Email</div>
           <input
             id="email"
