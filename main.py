@@ -30,7 +30,11 @@ def api_addUser():
         Year = int(flask.request.args['year'])
     else:
         Year = None
-    addUser(email=email, name=Name, classes=Classes, interests=Interests, year=Year)
+    if 'major' in flask.request.args:
+        Major = str(flask.request.args['major'])
+    else:
+        Major = None
+    addUser(email=email, name=Name, classes=Classes, interests=Interests, year=Year, major=Major)
     return('User added to DB!')
 
 @app.route('/api/v1/getUser')
