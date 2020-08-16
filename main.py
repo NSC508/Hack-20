@@ -1,5 +1,5 @@
 import flask 
-from Hack20Firestore import addUser, getUser
+from Hack20Firestore import addUser, getUser, getUserMatches
 
 app = flask.Flask(__name__)
 
@@ -39,5 +39,13 @@ def api_getUser():
         return flask.jsonify(getUser(flask.request.args['email']))
     else:
         return "You Did Not Pass in an E-Mail!"
+
+@app.route('/api/v1/getUserMatches')
+def api_getUserMatches():
+    if 'email' in flask.request.args:
+        return flask.jsonify(getUserMatches(flask.request.args['email']))
+    else:
+        return "You Did Not Pass in an E-Mail!"
+
 
 app.run()
