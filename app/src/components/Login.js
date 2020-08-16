@@ -17,7 +17,7 @@ class Login extends React.Component {
           Login
         </button>
         <button style={{ margin: "10px" }} onClick={this.signUp}>
-          Login
+          Sign Up
         </button>
       </div>
     );
