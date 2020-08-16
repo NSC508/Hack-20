@@ -9,7 +9,7 @@ class HomeTest extends React.Component {
   render() {
     return (
       <div style={{ textAlign: "center" }}>
-        <h1>You are logged in.</h1>
+        <h3>You are logged in! Head Over To Messaging!</h3>
         <button onClick={this.logout}>Logout</button>
       </div>
     );
