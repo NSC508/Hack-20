@@ -32,6 +32,12 @@ class SideNav extends React.Component {
                   key: 2
                 },
                 {
+                    path: '/Matches',
+                    name: 'Matches',
+                    css: 'fas fa-address-book',
+                    key: 2
+                  },
+                {
                   path: '/Submission',
                   name: 'Submission',
                   css: 'fab fa-wpforms',
@@ -113,7 +119,6 @@ class NavItem extends React.Component {
 const NavIcon = styled.div`
 
 `;
-
 
 export default class Sidebar extends React.Component {
     render() {

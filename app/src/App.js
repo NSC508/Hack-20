@@ -13,6 +13,7 @@ import { Home } from "./Home";
 import { About } from "./About";
 import { ChatBox } from "./ChatBox";
 import { Submission } from "./Submission";
+import { Matches } from "./Matches";
 import Sidebar from "./components/Sidebar";
 
 import fire from "./components/config/fire";
@@ -65,6 +66,7 @@ class App extends React.Component {
             <Route path="/about" component={About} />
             <Route path="/chat" component={this.state.user ? ChatBox : Login} />
             <Route component={Submission} />
+            <Route path="/Matches"component={Matches} />
           </Switch>
         </Router>
       </React.Fragment>
