@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@khanacademy/react-multi-select": "^0.3.3",
     "@progress/kendo-react-buttons": "^3.15.0",
     "@progress/kendo-react-conversational-ui": "^3.15.0",
     "@progress/kendo-react-intl": "^3.15.0",

@@ -35,16 +35,60 @@ class Login extends React.Component {
       <div style={{ textAlign: "center" }}>
         <div>
           <div>Email</div>
-          <input id="email" placeholder="Enter Email" type="text" />
+          <input
+            id="email"
+            placeholder="Enter Email"
+            type="text"
+            style={{
+              border: "1px solid #ccc",
+              solid: "#ccc",
+              borderRadius: "5px",
+              background: "#fff",
+              padding: "15px",
+              outline: "none",
+            }}
+          />
         </div>
         <div>
           <div>Password</div>
-          <input id="password" placeholder="Enter Password" type="text" />
+          <input
+            id="password"
+            placeholder="Enter Password"
+            type="text"
+            style={{
+              border: "1px solid #ccc",
+              solid: "#ccc",
+              borderRadius: "5px",
+              background: "#fff",
+              padding: "15px",
+              outline: "none",
+            }}
+          />
         </div>
-        <button style={{ margin: "10px" }} onClick={this.login}>
+        <button
+          style={{
+            margin: "10px",
+            background: "#5d8ffc",
+            color: "#fff",
+            border: "1px solid #5d8ffc",
+            borderRadius: "5px",
+            padding: "15px",
+          }}
+          onClick={this.login}
+        >
           Login
         </button>
-        <button style={{ margin: "10px" }} onClick={this.signUp}>
+        <button
+          style={{
+            margin: "10px",
+            background: "#5d8ffc",
+            color: "#fff",
+            border: "1px solid #5d8ffc",
+            borderRadius: "5px",
+            padding: "15px",
+          }}
+          onClick={this.signUp}
+        >
           Sign Up
         </button>
       </div>

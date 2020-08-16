@@ -1,0 +1,42 @@
+.errorMsg {
+  color: red;
+  font-size: 11px;
+}
+
+.fillForm {
+  /* background-color: lightsteelblue; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  max-width: 500px;
+  margin: auto;
+  justify-content: center;
+}
+
+.fillForm input {
+  border: none;
+  border-bottom: 1px solid rgb(163, 163, 163);
+  width: 60%;
+}
+
+.fillForm label {
+  display: block;
+  text-align: right;
+  padding-right: 90px;
+}
+
+.fillForm button {
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+.container {
+  margin: 10px;
+}
+
+.fillForm input, select {
+  margin-left: 10px;
+}
