@@ -2,7 +2,6 @@ import flask
 from Hack20Firestore import addUser, getUser
 
 app = flask.Flask(__name__)
-app.config['DEBUG'] = True
 
 
 @app.route('/')
