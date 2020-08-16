@@ -32,7 +32,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center", marginTop: "100px" }}>
         <div>
           <div>Email</div>
           <input
