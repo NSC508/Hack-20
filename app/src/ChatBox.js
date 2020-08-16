@@ -31,9 +31,6 @@ export class ChatBox extends React.Component {
                 text: '**Messages**'
             }]
         };
-
-        //this.handleClick = this.handleClick.bind(this);
-        //this.addMessages = this.addMessages.bind(this);
     }
 
     addNewMessage = (event) => {
@@ -41,18 +38,6 @@ export class ChatBox extends React.Component {
             return { messages: [...prevState.messages, event.message] };
         });
     };
-
-    handleClick = (prevState) => {
-        console.log('this is:', this);
-        this.setState({
-            messages: prevState.messages
-        })
-    };
-
-    addMessage(messages) {
-        let title = this.state.messages + 'James Brown';
-        this.setState({title});
-    }
 
     render() {
         return (
@@ -62,33 +47,21 @@ export class ChatBox extends React.Component {
                     <div class="panel-heading"><h3 class="panel-title">Individual Messages</h3>
                     </div>
                     <div class="panel-body">
-                    
                         <ul class="list-group">
-                            <button onClick={() => this.handleClick()}>
-                                James Brown
-                            </button>
-                            
-                            <button onClick={() => this.handleClick()}>
-                                Tyler Jones
-                            </button>
-
-                            <button onClick={() => this.handleClick()}>
-                                Kobe Bryant
-                            </button>
-
-                            <button onClick={() => this.handleClick()}>
-                                Lebron James
-                            </button>
-                            <button onClick={() => this.handleClick()}>
-                                Karman Singh
-                            </button>
-                            <button onClick={() => this.handleClick()}>
-                                Grace Hopper
-                            </button>
-                            <button onClick={() => this.handleClick()}>
-                                David Menenberg
-                            </button>
-    
+                            <li class="list-group-item"><strong>James Brown</strong>
+                            </li>
+                            <li class="list-group-item"><strong>Tyler Jones</strong>
+                            </li>
+                            <li class="list-group-item"><strong>Kobe Bryant</strong>
+                            </li>
+                            <li class="list-group-item"><strong>Lebron James</strong>
+                            </li>
+                            <li class="list-group-item"><strong>Karman Singh</strong>
+                            </li>
+                            <li class="list-group-item"><strong>Grace Hopper</strong>
+                            </li>
+                            <li class="list-group-item"><strong>David Menenberg</strong>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -98,26 +71,6 @@ export class ChatBox extends React.Component {
                     </div>
                     <div class="panel-body">
                         <ul class="list-group">
-                        <button onClick={() => this.handleClick()}>
-                            CSE 332: Data Structures
-                            </button>
-                            <button onClick={() => this.handleClick()}>
-                                Hack 20 Team
-                            </button>
-                            <button onClick={() => this.handleClick()}>
-                                Research Group
-                            </button>
-                            <button onClick={() => this.handleClick()}>
-                                CSE 446: Machine Learning
-                            </button>
-                            <button onClick={() => this.handleClick()}>
-                                Dorm Study Buddies
-                            </button>
-                            <button onClick={() => this.handleClick()}>
-                                Ardi Fan Girls
-                            </button>
-                            
-
                             <li class="list-group-item"><strong>CSE 332: Data Structures</strong>
                             </li>
                             <li class="list-group-item"><strong>Hack 20 Team</strong>
@@ -144,4 +97,6 @@ export class ChatBox extends React.Component {
             </div>
         );
     }
+
+
 }
