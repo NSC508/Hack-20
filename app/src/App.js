@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FormInput from "./components/FormInput";
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -26,6 +27,7 @@ function App() {
           <Route component={Submission} />
         </Switch>
       </Router>
+      <FormInput />
     </React.Fragment>
   );
 }
