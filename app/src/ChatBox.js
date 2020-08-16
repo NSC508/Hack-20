@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Chat } from '@progress/kendo-react-conversational-ui';
 import * as marked from 'marked';
 import "./ChatBox.css";
+import MatchName from './components/MatchName';
 
 function MessageTemplate(props) {
     let message = props.item;
@@ -43,6 +44,11 @@ export class ChatBox extends React.Component {
         return (
             <div>
                 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+                <div className="container">
+                    <h1>Matches:</h1>
+                    <MatchName name="William Nguyen" email="Williamvnguyen2@gmail.com"/>
+                    <MatchName name="Kashish Aggarwal" email="kashish@uw.edu"/>
+                </div>
                 <div class="panel panel-primary" id="result_panel">
                     <div class="panel-heading"><h3 class="panel-title">Individual Messages</h3>
                     </div>
