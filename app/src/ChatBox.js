@@ -36,7 +36,7 @@ export class ChatBox extends React.Component {
         //this.addMessages = this.addMessages.bind(this);
     }
 
-    /*addNewMessage = (event) => {
+    addNewMessage = (event) => {
         this.setState((prevState) => {
             return { messages: [...prevState.messages, event.message] };
         });
@@ -52,7 +52,7 @@ export class ChatBox extends React.Component {
     addMessage(messages) {
         let title = this.state.messages + 'James Brown';
         this.setState({title});
-    }*/
+    }
 
     render() {
         return (
