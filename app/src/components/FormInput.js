@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik"; // must npm install formik to use it
 import * as Yup from "yup";
+import "../FormStyle.css";
 
 /**
  * Form component, used when users initially sign up for an account
@@ -19,13 +20,13 @@ function FormInput() {
         validationSchema={Yup.object({
           firstName: Yup.string()
             .max(20, "Must be at most 20 characters")
-            .required("Required"),
+            .required("Required*"),
           lastName: Yup.string()
             .max(20, "Must be at most 20 characters")
-            .required("Required"),
+            .required("Required*"),
           email: Yup.string()
             .email("Must be a valid email")
-            .required("Required")
+            .required("Required*")
           })
         }
         onSubmit={(values, { setSubmitting } ) => {
@@ -35,20 +36,20 @@ function FormInput() {
           }, 200);
         }}
       >
-        <Form>
+        <Form className="fullForm">
           <label>Full Name
             <Field
               name="firstName"
               type="text"
               placeholder="First Name"
             />
-            <ErrorMessage name="firstName" />
+            <div className="errorMsg"><ErrorMessage name="firstName" /></div>
             <Field
               name="lastName"
               type="text"
               placeholder="Last Name"
             />
-            <ErrorMessage name="lastName" />
+            <div className="errorMsg"><ErrorMessage name="lastName" /></div>
           </label>
           <label>
             <Field
@@ -57,7 +58,7 @@ function FormInput() {
               placeholder="xxx@example.com"
             />
           </label>
-          <ErrorMessage name="email" />
+          <div className="errorMsg"><ErrorMessage name="email" /></div>
           <button type="submit">Submit</button>
         </Form>
       </Formik>
