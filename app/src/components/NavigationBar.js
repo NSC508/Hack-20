@@ -21,7 +21,7 @@ const Styles = styled.div`
 export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">FriendApp</Navbar.Brand>
+      <Navbar.Brand href="/">Mingle</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Form className="form-center">
         <FormControl type="text" placeholder="Search" className="" />
