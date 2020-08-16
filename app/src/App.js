@@ -9,6 +9,7 @@ import { NavigationBar } from "./components/NavigationBar";
 
 import { Home } from "./Home";
 import { About } from "./About";
+import { ChatBox } from "./ChatBox";
 import { Submission } from "./Submission";
 import Sidebar from "./components/Sidebar";
 
@@ -56,6 +57,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/chat" component={ChatBox} />
             <Route component={Submission} />
           </Switch>
         </Router>
