@@ -10,7 +10,7 @@ db = firestore.Client()
 #    u'Interests': ['Chess'],
 #})
 
-def addUser(email, name=None, classes=None, interests=None, year=None):
+def addUser(email, name=None, classes=None, interests=None, year=None, major=None):
     db = firestore.Client()
     doc_ref = db.collection(u'users').document()
     doc_ref.set({
@@ -18,7 +18,8 @@ def addUser(email, name=None, classes=None, interests=None, year=None):
         u'Classes': classes,
         u'Interests': interests,
         u'Year': year,
-        u'EMail': email
+        u'EMail': email,
+        u'Major': major
     })
 
 def getUser(email):
@@ -26,3 +27,8 @@ def getUser(email):
     docs = db.collection(u'users').where(u'EMail', u'==', email).stream()
     for doc in docs: 
         return doc.to_dict()
+
+def getUserMatches(email):
+    users_ref = db.collection(u'users')
+    docs = db.collection(u'users').where(u'EMail', u'==', email).stream()
+    
