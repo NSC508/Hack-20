@@ -27,13 +27,13 @@ class App extends React.Component {
   }
   componentDidMount() {
     this.authListener();
-    fetch('http://127.0.0.1:5000/api/v1/getUser?email=nsc5081@uw.edu')
-     .then(response => response.json())
-     .then(data => {
-          console.log("This is working");
-          console.log(data);
-     })
-     .catch(console.error)
+    fetch("http://127.0.0.1:5000/api/v1/getUser?email=nsc5081@uw.edu")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("This is working");
+        console.log(data);
+      })
+      .catch(console.error);
   }
 
   authListener() {
@@ -61,7 +61,7 @@ class App extends React.Component {
               component={this.state.user ? HomeTest : Login}
             />
             <Route path="/about" component={About} />
-            <Route path="/chat" component={ChatBox} />
+            <Route path="/chat" component={this.state.user ? ChatBox : Login} />
             <Route component={Submission} />
           </Switch>
         </Router>
