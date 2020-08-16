@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 export const About = () => (
     <div>
+        <h1 className="title">
+            About Us:
+        </h1>
 
         <h1 className="subtitle">
             Inspiration
@@ -57,6 +60,18 @@ export const About = () => (
               line-height: 1.2;
               font-weight: 800;
               letter-spacing: -0.05rem;
+          }
+
+          .title {
+            max-width: 50rem;
+            padding: 0 1rem;
+            font-size: 50%;
+            margin: 3rem auto;
+              font-size: 2.5rem;
+              line-height: 1.2;
+              font-weight: 800;
+              letter-spacing: -0.05rem;
+
           }
 
           .paragraph {
