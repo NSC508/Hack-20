@@ -31,12 +31,7 @@ class SideNav extends React.Component {
                   css: 'fas fa-users',
                   key: 2
                 },
-                {
-                    path: '/Matches',
-                    name: 'Matches',
-                    css: 'fas fa-address-book',
-                    key: 2
-                  },
+               
                 {
                   path: '/Submission',
                   name: 'Submission',
