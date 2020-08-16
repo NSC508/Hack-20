@@ -31,4 +31,15 @@ def getUser(email):
 def getUserMatches(email):
     users_ref = db.collection(u'users')
     docs = db.collection(u'users').where(u'EMail', u'==', email).stream()
-    
+    matches = dict()
+    for doc in docs:
+        docDict = doc.to_dict()
+        matches = {}
+        interests = docDict["Interests"]
+        classes = docDict["Classes"]
+        docs2 = db.collection(u'users').where(u'Interests', u'array_contains_any', interests).stream()
+        for doc2 in docs2:
+            matches[doc2.to_dict()["EMail"]] = doc2.to_dict()
+        print(matches)
+
+getUserMatches('nsc5081@uw.edu')
