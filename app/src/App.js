@@ -26,6 +26,13 @@ class App extends React.Component {
   }
   componentDidMount() {
     this.authListener();
+    fetch('http://127.0.0.1:5000/api/v1/getUser?email=nsc5081@uw.edu')
+     .then(response => response.json())
+     .then(data => {
+          console.log("This is working");
+          console.log(data);
+     })
+     .catch(console.error)
   }
 
   authListener() {
