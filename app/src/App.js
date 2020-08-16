@@ -48,13 +48,16 @@ class App extends React.Component {
           <Sidebar />
 
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route
+              exact
+              path="/"
+              component={this.state.user ? HomeTest : Login}
+            />
             <Route path="/about" component={About} />
             <Route path="/chat" component={ChatBox} />
             <Route component={Submission} />
           </Switch>
         </Router>
-        {this.state.user ? <HomeTest /> : <Login />}
       </React.Fragment>
     );
   }
