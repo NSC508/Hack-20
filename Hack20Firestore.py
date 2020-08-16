@@ -41,4 +41,4 @@ def getUserMatches(email):
         for doc2 in docs2:
             matches[doc2.to_dict()["EMail"]] = doc2.to_dict()
     matches.pop(email)
-    print(matches)
+    return matches
