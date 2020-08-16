@@ -28,13 +28,13 @@ class SideNav extends React.Component {
                 {
                   path: '/about',
                   name: 'About',
-                  css: 'fa fa-fw fa-clock',
+                  css: 'fas fa-users',
                   key: 2
                 },
                 {
                   path: '/Submission',
                   name: 'Submission',
-                  css: 'fas fa-hashtag',
+                  css: 'fab fa-wpforms',
                   key: 3
                 },
                 {
