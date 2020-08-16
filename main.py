@@ -43,10 +43,8 @@ def api_getUser():
 @app.route('/api/v1/getUserMatches')
 def api_getUserMatches():
     if 'email' in flask.request.args:
-        return flask.request.args['email']
-        #return flask.jsonify(getUserMatches(flask.request.args['email']))
+        return flask.jsonify(getUserMatches(flask.request.args['email']))
     else:
         return "You Did Not Pass in an E-Mail!"
-
 
 app.run()

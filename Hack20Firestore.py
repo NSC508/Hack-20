@@ -42,5 +42,3 @@ def getUserMatches(email):
             matches[doc2.to_dict()["EMail"]] = doc2.to_dict()
     matches.pop(email)
     print(matches)
-
-getUserMatches('nsc5081@uw.edu')
